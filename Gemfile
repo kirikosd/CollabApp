@@ -41,6 +41,14 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'bootstrap_form'
 
+gem 'rspec-rails', '~> 3.6'
+gem 'factory_girl_rails'
+gem 'rails-controller-testing'
+gem 'headless'
+#gem 'capybara'
+gem 'poltergeist'
+gem 'database_cleaner'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
