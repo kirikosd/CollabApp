@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
     before_action :opened_conversations_windows
+    before_action :all_ordered_conversations
 
     def opened_conversations_windows
         if user_signed_in?
@@ -9,6 +10,12 @@ class ApplicationController < ActionController::Base
                                             .find(session[:private_conversations])
         else
           @private_conversations_windows = []
+        end
+    end
+
+    def all_ordered_conversations 
+        if user_signed_in?
+          @all_conversations = OrderConversationsService.new({user: current_user}).call
         end
     end
     
