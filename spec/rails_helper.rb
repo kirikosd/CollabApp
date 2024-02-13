@@ -86,6 +86,7 @@ RSpec.configure do |config|
 
   config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include FactoryGirl::Syntax::Methods
+  Capybara.default_max_wait_time = 10
   Capybara.javascript_driver = :poltergeist
   Capybara.server = :puma 
   
