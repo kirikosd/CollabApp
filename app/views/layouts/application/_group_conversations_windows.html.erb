@@ -1,0 +1,6 @@
+<% @group_conversations_windows.each do |conversation| %>
+    <%= render partial: "group/conversations/conversation",
+              locals: { conversation: conversation, 
+                        user: current_user } %>
+<% end %>
+  
