@@ -8,6 +8,19 @@ RSpec.describe User, type: :model do
       expect(association.macro).to eq :has_many
       expect(association.options[:dependent]).to eq :destroy
     end
+
+    it 'has_many group_messages' do 
+      association = described_class.reflect_on_association(:group_messages)
+      expect(association.macro).to eq :has_many
+      expect(association.options[:class_name]).to eq 'Group::Message'
+    end
+    
+    it 'has_and_belongs_to_many group_conversations' do
+      association = described_class.reflect_on_association(:group_conversations)
+      expect(association.macro).to eq :has_and_belongs_to_many
+      expect(association.options[:class_name]).to eq 'Group::Conversation'
+    end
+
     it 'has_many contacts' do
       association = described_class.reflect_on_association(:contacts)
       expect(association.macro).to eq :has_many
