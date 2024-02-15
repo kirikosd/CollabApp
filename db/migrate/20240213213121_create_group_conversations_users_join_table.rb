@@ -7,4 +7,4 @@ class CreateGroupConversationsUsersJoinTable < ActiveRecord::Migration[7.1]
       add_index :group_conversations_users, :conversation_id
       add_index :group_conversations_users, :user_id
     end
-  end
+end

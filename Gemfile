@@ -52,6 +52,8 @@ gem 'faker'
 
 gem 'will_paginate', '~> 3.1.0'
 
+gem 'gon'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 
