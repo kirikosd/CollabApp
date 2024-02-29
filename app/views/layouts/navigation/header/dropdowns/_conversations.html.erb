@@ -4,10 +4,10 @@
   </i>
 </a>
 
-<ul class="dropdown dropdown-menu" role="menu">
+<ul>
   <% @all_conversations.each do |conversation| %>
     <%= render partial: conversation_header_partial_path(conversation),
                locals: { conversation: conversation, 
                          user_id: current_user.id } %>
   <% end %>
-</ul><!-- dropdown-menu -->
+</ul>
